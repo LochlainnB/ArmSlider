@@ -128,7 +128,7 @@ namespace ArmSlider
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
             sliderOptions.ModName = "ArmSlider";
-            sliderOptions.ModVersion = "1.0.0";
+            sliderOptions.ModVersion = "1.0.1";
             sliderOptions.SetFolder("ArmSlider");
             sliderOptions.SetLinkGroup(1, "");
         }
@@ -152,11 +152,14 @@ namespace ArmSlider
                 sliderOptions.GetFromFile();
                 for (int i = 0; i < sliderOptions.Settings.Count; i++)
                 {
-                    if ((bool)sliderOptions.Settings[i].SavedValue)
+                    try // Prevents errors if the setting is not a bool, not that that should ever happen but somehow it did for ERROR
                     {
-                        activeOption = sliderOptions.Settings[i];
-                        break;
-                    }
+                        if ((bool)sliderOptions.Settings[i].SavedValue)
+                        {
+                            activeOption = sliderOptions.Settings[i];
+                            break;
+                        }
+                    } catch {}
                 }
                 slider.SetActive(activeOption != null);
                 slider.transform.localPosition = new Vector3(0.02f, 0.08f, 0.02f);
