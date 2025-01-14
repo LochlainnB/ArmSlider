@@ -152,7 +152,7 @@ namespace ArmSlider
                 sliderOptions.GetFromFile();
                 for (int i = 0; i < sliderOptions.Settings.Count; i++)
                 {
-                    try // Prevents errors if the setting is not a bool, not that that should ever happen but somehow it did for ERROR // ERROR Here! Thats me!
+                    try // Prevents errors if the setting is not a bool, not that that should ever happen but somehow it did for ERROR
                     {
                         if ((bool)sliderOptions.Settings[i].SavedValue)
                         {
