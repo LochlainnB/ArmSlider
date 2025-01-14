@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 using ArmSlider;
 
-[assembly: MelonInfo(typeof(Slider), "ArmSlider", "1.0.1", "MasterMischief")]
+[assembly: MelonInfo(typeof(Slider), "ArmSlider", "1.0.2", "MasterMischief")]
 [assembly: MelonGame("Buckethead Entertainment", "RUMBLE")]
 [assembly: VerifyLoaderVersion(0, 6, 2, true)]
 

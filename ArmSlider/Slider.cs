@@ -128,7 +128,7 @@ namespace ArmSlider
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
             sliderOptions.ModName = "ArmSlider";
-            sliderOptions.ModVersion = "1.0.1";
+            sliderOptions.ModVersion = "1.0.2";
             sliderOptions.SetFolder("ArmSlider");
             sliderOptions.SetLinkGroup(1, "");
         }
@@ -147,7 +147,7 @@ namespace ArmSlider
             {
                 // Initialise the slider
                 // Parent: Player Controller/Visuals/RIG/Bone_Pelvis/Bone_Spine/Bone_Chest/Bone_Shoulderblade_L/Bone_Shoulder_L/Bone_Lowerarm_L/
-                slider = GameObject.Instantiate(templateSlider, PlayerManager.instance.localPlayer.Controller.gameObject.transform.GetChild(5).GetChild(7).GetChild(0).GetChild(2).GetChild(0).GetChild(1).GetChild(0).GetChild(0));
+                slider = GameObject.Instantiate(templateSlider, Calls.Players.GetLocalPlayer().Controller.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(4).GetChild(0).GetChild(1).GetChild(0).GetChild(0));
                 slider.name = "SettingSlider";
                 sliderOptions.GetFromFile();
                 for (int i = 0; i < sliderOptions.Settings.Count; i++)
@@ -162,8 +162,8 @@ namespace ArmSlider
                     } catch {}
                 }
                 slider.SetActive(activeOption != null);
-                slider.transform.localPosition = new Vector3(0.02f, 0.08f, 0.02f);
-                slider.transform.localRotation = Quaternion.Euler(355.0f, 320.0f, 273.0f);
+                slider.transform.localPosition = new Vector3(-0.0388f, 0.1077f, -0.0422f);
+                slider.transform.localRotation = Quaternion.Euler(353.9099f, 140.8539f, 279.8255f);
                 slider.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 MelonCoroutines.Start(LateUpdateSlider(activeOption == null ? 0 : settings[activeOption].Value));
                 InteractionSlider interactionSlider = slider.GetComponentInChildren<InteractionSlider>();

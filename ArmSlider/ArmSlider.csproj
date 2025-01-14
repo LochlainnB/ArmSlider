@@ -15,38 +15,263 @@
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
   </PropertyGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /Y &quot;$(TargetPath)&quot; &quot;E:\SteamLibrary\steamapps\common\RUMBLE\Mods&quot;" />
+  </Target>
+
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RUMBLE\MelonLoader\net6\0Harmony.dll</HintPath>
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\net6\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppBucketheadEntertainment.Plugins">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppBucketheadEntertainment.Plugins.dll</HintPath>
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppBucketheadEntertainment.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppInterop.Runtime">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RUMBLE\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Il2Cppmscorlib">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppRUMBLE.AssetStore">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.AssetStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppRUMBLE.AssetStore.ModernUIPack">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.AssetStore.ModernUIPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppRUMBLE.Platform">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppRUMBLE.Platform.Info">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.Platform.Info.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppRUMBLE.Platform.Info.Steam">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.Platform.Info.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppRUMBLE.Plugins">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppRUMBLE.Rendering">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.Rendering.dll</HintPath>
     </Reference>
     <Reference Include="Il2CppRUMBLE.Runtime">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.Runtime.dll</HintPath>
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\Il2CppRUMBLE.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="MelonLoader">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RUMBLE\MelonLoader\net6\MelonLoader.dll</HintPath>
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\net6\MelonLoader.dll</HintPath>
     </Reference>
     <Reference Include="ModUI">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RUMBLE\Mods\ModUI.dll</HintPath>
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\Mods\ModUI.dll</HintPath>
     </Reference>
     <Reference Include="RumbleModdingAPI">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RUMBLE\Mods\RumbleModdingAPI.dll</HintPath>
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\Mods\RumbleModdingAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ContentLoadModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.NVIDIAModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.NVIDIAModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.PropertiesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\RUMBLE\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
     </Reference>
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /Y &quot;$(TargetPath)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\RUMBLE\Mods&quot;" />
-  </Target>
 
 </Project>
