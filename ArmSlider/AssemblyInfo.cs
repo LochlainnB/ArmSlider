@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 using ArmSlider;
 
-[assembly: MelonInfo(typeof(Slider), "ArmSlider", "1.0.2", "MasterMischief")]
+[assembly: MelonInfo(typeof(Slider), "ArmSlider", "1.1.0", "MasterMischief")]
 [assembly: MelonGame("Buckethead Entertainment", "RUMBLE")]
 [assembly: VerifyLoaderVersion(0, 6, 2, true)]
 
@@ -16,7 +16,7 @@ using ArmSlider;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ArmSlider")]
-[assembly: AssemblyCopyright("Copyright ©  2024")]
+[assembly: AssemblyCopyright("© 2025 MasterMischief")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -38,5 +38,5 @@ using ArmSlider;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1")]
-[assembly: AssemblyFileVersion("1.0.1")]
+[assembly: AssemblyVersion("1.1.0")]
+[assembly: AssemblyFileVersion("1.1.0")]

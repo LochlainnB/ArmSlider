@@ -114,7 +114,7 @@ namespace ArmSlider
         {
             private static bool Prefix(InteractionHand __instance, InteractionBase interaction)
             {
-                if (__instance.gameObject == PlayerManager.instance.localPlayer.Controller.gameObject.transform.GetChild(1).GetChild(1).gameObject && interaction.transform.parent.name == "SettingSlider")
+                if (__instance.gameObject == PlayerManager.instance.localPlayer.Controller.gameObject.transform.GetChild(2).GetChild(1).gameObject && interaction.transform.parent.name == "SettingSlider")
                     return false;
                 return true;
             }
@@ -128,7 +128,7 @@ namespace ArmSlider
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
             sliderOptions.ModName = "ArmSlider";
-            sliderOptions.ModVersion = "1.0.2";
+            sliderOptions.ModVersion = "1.1.0";
             sliderOptions.SetFolder("ArmSlider");
             sliderOptions.SetLinkGroup(1, "");
         }
@@ -146,8 +146,8 @@ namespace ArmSlider
             if (slider == null && templateSlider != null && PlayerManager.instance != null && PlayerManager.instance.localPlayer != null && PlayerManager.instance.localPlayer.Controller != null)
             {
                 // Initialise the slider
-                // Parent: Player Controller/Visuals/RIG/Bone_Pelvis/Bone_Spine/Bone_Chest/Bone_Shoulderblade_L/Bone_Shoulder_L/Bone_Lowerarm_L/
-                slider = GameObject.Instantiate(templateSlider, Calls.Players.GetLocalPlayer().Controller.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(4).GetChild(0).GetChild(1).GetChild(0).GetChild(0));
+                // Parent: Player Controller/Visuals/Skelington/Bone_Pelvis/Bone_Spine_A/Bone_Chest/Bone_Shoulderblade_L/Bone_Shoulder_L/
+                slider = GameObject.Instantiate(templateSlider, Calls.Players.GetLocalPlayer().Controller.transform.GetChild(1).GetChild(1).GetChild(0).GetChild(4).GetChild(0).GetChild(1).GetChild(0).GetChild(0));
                 slider.name = "SettingSlider";
                 sliderOptions.GetFromFile();
                 for (int i = 0; i < sliderOptions.Settings.Count; i++)
