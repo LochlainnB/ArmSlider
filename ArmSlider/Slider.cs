@@ -114,7 +114,7 @@ namespace ArmSlider
         {
             private static bool Prefix(InteractionHand __instance, InteractionBase interaction)
             {
-                if (__instance.gameObject == PlayerManager.instance.localPlayer.Controller.gameObject.transform.GetChild(2).GetChild(1).gameObject && interaction.transform.parent.name == "SettingSlider")
+                if (__instance.gameObject == PlayerManager.instance.localPlayer.Controller.gameObject.transform.GetChild(2).GetChild(1).gameObject && interaction.transform.parent.name == "ArmSlider")
                     return false;
                 return true;
             }
@@ -148,7 +148,7 @@ namespace ArmSlider
                 // Initialise the slider
                 // Parent: Player Controller/Visuals/Skelington/Bone_Pelvis/Bone_Spine_A/Bone_Chest/Bone_Shoulderblade_L/Bone_Shoulder_L/
                 slider = GameObject.Instantiate(templateSlider, Calls.Players.GetLocalPlayer().Controller.transform.GetChild(1).GetChild(1).GetChild(0).GetChild(4).GetChild(0).GetChild(1).GetChild(0).GetChild(0));
-                slider.name = "SettingSlider";
+                slider.name = "ArmSlider";
                 sliderOptions.GetFromFile();
                 for (int i = 0; i < sliderOptions.Settings.Count; i++)
                 {
@@ -162,9 +162,9 @@ namespace ArmSlider
                     } catch {}
                 }
                 slider.SetActive(activeOption != null);
-                slider.transform.localPosition = new Vector3(-0.0388f, 0.1077f, -0.0422f);
-                slider.transform.localRotation = Quaternion.Euler(353.9099f, 140.8539f, 279.8255f);
-                slider.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                slider.transform.localPosition = new Vector3(-0.0298f, 0.102f, -0.0312f);
+                slider.transform.localRotation = Quaternion.Euler(356.0f, 140.8539f, 277.8255f);
+                slider.transform.localScale = new Vector3(0.45f, 0.45f, 0.45f);
                 MelonCoroutines.Start(LateUpdateSlider(activeOption == null ? 0 : settings[activeOption].Value));
                 InteractionSlider interactionSlider = slider.GetComponentInChildren<InteractionSlider>();
                 interactionSlider.OnNormalizedValueChanged.AddListener(new System.Action<float>(value =>
