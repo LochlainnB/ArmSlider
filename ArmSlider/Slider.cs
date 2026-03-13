@@ -1,5 +1,5 @@
 ﻿using MelonLoader;
-using RumbleModdingAPI;
+using RumbleModdingAPI.RMAPI;
 using UnityEngine;
 using HarmonyLib;
 using System;
@@ -128,7 +128,7 @@ namespace ArmSlider
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
             sliderOptions.ModName = "ArmSlider";
-            sliderOptions.ModVersion = "1.1.1";
+            sliderOptions.ModVersion = "1.1.2";
             sliderOptions.SetFolder("ArmSlider");
             sliderOptions.SetLinkGroup(1, "");
         }
@@ -138,7 +138,7 @@ namespace ArmSlider
             if (Calls.Scene.GetSceneName() == "Gym" && templateSlider == null)
             {
                 // Grab one of the sliders from the audio settings menu and use it as a template
-                templateSlider = GameObject.Instantiate(Calls.GameObjects.Gym.LOGIC.Slabbuddymenuvariant.MenuForm.Base.AudioSlab.InteractableObjects.MasterSlider.GetGameObject());
+                templateSlider = GameObject.Instantiate(GameObjects.Gym.INTERACTABLES.MenuSlab.Content.Audio.MasterVolumeSetting.Slider.GetGameObject()); //Slabbuddymenuvariant.MenuForm.Base.AudioSlab.InteractableObjects.MasterSlider.GetGameObject());
                 templateSlider.name = "TemplateSlider";
                 templateSlider.SetActive(false);
                 GameObject.DontDestroyOnLoad(templateSlider);
